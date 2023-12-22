@@ -29,7 +29,7 @@ class MainPage(BasePage):
         cookieCountBeforeClick = self.get_cookie_count()
         sleep(10)  # to get cookie count locator
         cookieCountAfterClick = self.get_cookie_count()
-        for i in range(10001):
+        for i in range(10000):
             bigCookieElement.click()
             if cookieCountAfterClick != cookieCountBeforeClick + 1:
                 logger("ERROR", "Cookie count does not match")
